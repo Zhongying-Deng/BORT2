@@ -9,4 +9,6 @@ Then `pytorch 1.7.1 + cuda 10.1, python 3.7` will be installed.
 
 **This is a must, otherwise, some files may be missing.**
 
-The zip file contains an initial version of the code for BORT<sup>2</sup>, but it will be further updated. The instructions for using the code can be found at ([this issue](https://github.com/Zhongying-Deng/BORT2/issues/1#issuecomment-1655890786))
+============ **code** =============
+
+The zip file `Dassl_BORT2.zip` contains an initial version of the code for BORT<sup>2</sup>, but it will be further updated. The instructions for using the code can be found at ([this issue](https://github.com/Zhongying-Deng/BORT2/issues/1#issuecomment-1655890786))
