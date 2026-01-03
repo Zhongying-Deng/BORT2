@@ -1,0 +1,22 @@
+DATALOADER:
+  TRAIN_X:
+    SAMPLER: 'RandomSampler'
+    BATCH_SIZE: 128
+  TRAIN_U:
+    SAME_AS_X: False
+    BATCH_SIZE: 128
+  TEST:
+    BATCH_SIZE: 256
+
+OPTIM:
+  NAME: 'adam'
+  LR: 0.0002
+  STEPSIZE: [50]
+  MAX_EPOCH: 50
+  LR_SCHEDULER: 'cosine'
+
+TRAINER:
+  FIXMATCH:
+    STRONG_TRANSFORMS: ['random_flip', 'randaugment_fixmatch', 'normalize', 'cutout']
+    EMA_ALPHA: 0.999
+

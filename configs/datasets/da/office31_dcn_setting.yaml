@@ -1,0 +1,14 @@
+INPUT:
+  SIZE: (252, 252)
+  TRANSFORMS: ['random_flip', 'center_crop', 'random_translation', 'normalize']
+
+DATASET:
+  NAME: 'Office31'
+
+MODEL:
+  BACKBONE:
+    NAME: 'alexnet'
+  #HEAD:
+  #  NAME: 'mlp'
+  #  HIDDEN_LAYERS: [256]
+  #  DROPOUT: 0.

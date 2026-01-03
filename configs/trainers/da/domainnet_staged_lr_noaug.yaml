@@ -1,0 +1,24 @@
+DATALOADER:
+  NUM_WORKERS: 4
+  TRAIN_X:
+    SAMPLER: 'RandomDomainSampler'
+    BATCH_SIZE: 30
+  TRAIN_U:
+    SAME_AS_X: False
+    BATCH_SIZE: 6
+  TEST:
+    BATCH_SIZE: 30
+
+OPTIM:
+  NAME: 'sgd'
+  #LR: 0.002
+  LR: 0.02
+  STAGED_LR: True
+  NEW_LAYERS: ('backbone.layer1_adap', 'backbone.layer_adap', 'backbone.layer4_adap', 'backbone.layer2_adap', 'backbone.layer3_adap', 'backbone.layer4_new', 'adaptive_cls', 'classifier', 'backbone.dist_net_conv')
+  BASE_LR_MULT: 0.1
+  MAX_EPOCH: 40
+  LR_SCHEDULER: 'cosine'
+
+TRAIN:
+  PRINT_FREQ: 100
+

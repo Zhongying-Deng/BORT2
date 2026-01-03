@@ -1,0 +1,20 @@
+DATALOADER:
+  TRAIN_X:
+    BATCH_SIZE: 32
+  TEST:
+    BATCH_SIZE: 32
+
+OPTIM:
+  NAME: 'adam'
+  LR: 0.0005
+  LR_SCHEDULER: 'cosine' 
+  STEPSIZE: (10, )
+  #WEIGHT_DECAY: 0.00005
+  ##GAMMA: 0.5
+  NEW_LAYERS: ['classifier']
+  BASE_LR_MULT: 0.1
+  STAGED_LR: True
+  MAX_EPOCH: 100
+
+TRAIN:
+  COUNT_ITER: 'train_u'

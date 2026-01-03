@@ -1,0 +1,29 @@
+DATALOADER:
+  TRAIN_X:
+    BATCH_SIZE: 32
+  TRAIN_U:
+    SAME_AS_X: False
+    BATCH_SIZE: 32
+  TEST:
+    BATCH_SIZE: 32
+
+OPTIM:
+  NAME: 'sgd'
+  LR: 0.001
+  STEPSIZE: [10]
+  MAX_EPOCH: 10
+
+TRAIN:
+  PRINT_FREQ: 50
+  COUNT_ITER: 'train_u'
+
+TRAINER:
+  FIXMATCH:
+    STRONG_TRANSFORMS: ['random_flip', 'randaugment_fixmatch', 'normalize', 'cutout']
+    EMA_ALPHA: 0.999
+  CALOSS:
+    LOSS_TYPE: 'L1'
+    RAMPUP: 5
+    WEIGHT_D: 1.  # channel attention domain loss weight
+    WEIGHT_CON: 0.  # consisitency loss weight
+
