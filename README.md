@@ -42,11 +42,11 @@ After that, `pytorch 1.7.1 + cuda 10.1, python 3.7` should be installed. **Note 
 
 ### Training
 
-- The training scripts are provided in the file, such as `train_digit5_ms_cutmix.sh` for training on Digit-Five using FixMatch-CM. The backbone models for the FixMatch-CM can be found at `dassl/modeling/backbone`, such as `resnet_mixstyle.py` or `cnn_digit5_m3sda_mixstyle.py`, all with the suffix ‘_mixstyle.py’.
+- The training scripts for the first-step training are provided in the bash files, such as `train_digit5_ms_cutmix.sh` for training on Digit-Five using FixMatch-CM. The backbone models for the FixMatch-CM can be found at `dassl/modeling/backbone`, such as `resnet_mixstyle.py` or `cnn_digit5_m3sda_mixstyle.py`, all with the suffix ‘_mixstyle.py’. You can also implement other existing MSDA methods as the first-step training strategies.
 
 - After the training with FixMatch-CM, you will obtain the first-step trained model, such as `model.pth`. 
 
-- The second step BORT2 training can use the script `train_digit5_mscm_dist_net_meta_train_retrain.sh` (similar names apply to PACS). Note that in the bash script, you will need to specify the checkpoint from the first-step training by `MODEL.INIT_WEIGHTS model.pth`. The config files and the trainer (like `FixMatchMSCMDistNetMetaLearnRetrain`) are specified in the script. And the trainer for BORT2 is named  `FixMatchMSCMDistNetMetaLearnRetrain` of which the py file can be found at `dassl/engine/da/fixmatch_mscm_dist_net_meta_learn_retrain.py`. 
+- The second step BORT2 training uses the script `train_digit5_mscm_dist_net_meta_train_retrain.sh` (similar names apply to PACS). Note that in the bash script, you will need to specify the checkpoint from the first-step training by `MODEL.INIT_WEIGHTS model.pth`. The config files and the trainer (like `FixMatchMSCMDistNetMetaLearnRetrain`) are specified in the script. And the trainer for BORT2 is named  `FixMatchMSCMDistNetMetaLearnRetrain`, of which the py file can be found at `dassl/engine/da/fixmatch_mscm_dist_net_meta_learn_retrain.py`. 
 
 =========================
 
