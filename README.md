@@ -39,6 +39,7 @@ After that, `pytorch 1.7.1 + cuda 10.1, python 3.7` should be installed. **Note 
 
 - Follow the instructions in [DATASETS.md](./DATASETS.md) to install the datasets. All the data should be stored under the `data` folder.
 
+- You may also be interested in my other implementations of unsupervised domain adaptation work: [DAC-Net (BMVC 2021)](https://github.com/Zhongying-Deng/DAC-Net), [DIDA-Net (IEEE T-IP 2022)](https://github.com/Zhongying-Deng/DIDA), [GeNRT (Pattern Recognition 2026)](https://github.com/Zhongying-Deng/GeNRT). They are also implemented using [Dassl codebase](https://github.com/KaiyangZhou/Dassl.pytorch#get-started).
 
 ### Training
 
@@ -50,7 +51,7 @@ After that, `pytorch 1.7.1 + cuda 10.1, python 3.7` should be installed. **Note 
 
 =========================
 
-The zip file `Dassl_BORT2.zip` contains an initial version of the code for BORT<sup>2</sup>, but it has been updated and replaced by this new version. The instructions for using the code in the zip file can be found at ([this issue](https://github.com/Zhongying-Deng/BORT2/issues/1#issuecomment-1655890786))
+The zip file `Dassl_BORT2.zip` contains an initial version of the code for BORT<sup>2</sup>, but it has been updated and replaced by this new version. The instructions for using the code in the zip file can be found at [this issue](https://github.com/Zhongying-Deng/BORT2/issues/1#issuecomment-1655890786).
 
 
 ## Citation
